@@ -1,0 +1,14 @@
+Necessary installs
+python v 3.8.x
+
+python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose sklearn
+
+spacy:
+pip install -U spacy
+pip install -U spacy-lookups-data
+python -m spacy download en_core_web_sm
+
+python -m pip install -U spacy
+python -m pip install sklearn
+python -m pip install sklearn-pandas
+python -m pip install pandas

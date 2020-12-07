@@ -1,0 +1,10 @@
+Preprocessing:
+1) Tokenization (unigram, bigram) with CountVectorizer
+2) Eliminate stop-words
+3) POS-Tagging with spacy
+4) Negation-handling: (see stop-words list if not is filtered out!)
+    4.1) If negationword is found, every sentiment-value between negationword and character (.,!?;:) gets tag "NOT_".
+    4.2) sentiment-value of every word with negation-tag is flipped (5 == middle, if value was 7 (5 + 2), new value is 3 (5 - 2)). Two exceptions:
+        4.1.1) "not only", "not just", "no question", "not to mention" and "no wonder" will not affect sentiment-value
+        4.1.2) negative rhethorical questions aren't considered.
+5) TF-IDF
